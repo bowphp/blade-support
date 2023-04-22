@@ -1,6 +1,6 @@
-# Bow blade support
+# Blade support for bowphp
 
-Support [Blade](https://laravel.com/docs/5.8/views) for [Bow Framework](https://github.com/bowapp/app). This package help you to add laravel blade template on your project.
+Support [Blade](https://laravel.com/docs/10.x/views) for [Bow Framework](https://github.com/bowapp/app). This package help you to add laravel blade template on your project.
 
 The documentaion is available in [english](./docs/en.md) and [french](./docs/fr.md)
 
