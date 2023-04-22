@@ -16,7 +16,7 @@
 	],
 	"autoload": {
 		"psr-4": {
-			"\\Bow\\Blade\\": "src/"
+			"Bow\\Blade\\": "src/"
 		}
 	},
 	"require-dev": {
@@ -26,6 +26,6 @@
 	"scripts": {
 		"phpcbf": "phpcbf --standard=psr12 --severity=4 --tab-width=4 src tests",
 		"phpcs": "phpcs --standard=psr12 --severity=4 --tab-width=4 src",
-		"test": "phpunit tests"
+		"test": "phpunit tests --bootstrap vendor/autoload.php"
 	}
 }

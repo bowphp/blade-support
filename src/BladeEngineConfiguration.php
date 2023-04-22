@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Bow\Blade;
 
 use Bow\View\View;
@@ -13,12 +15,7 @@ class BladeEngineConfiguration extends Configuration
      */
     public function create(Config $config): void
     {
-        $this->container->bind('view', function () use ($config) {
-            View::pushEngine('blade', BladeEngine::class);
-            View::configure($config);
-
-            return View::getInstance();
-        });
+        View::pushEngine('blade', BladeEngine::class);
     }
 
     /**
@@ -26,6 +23,8 @@ class BladeEngineConfiguration extends Configuration
      */
     public function run(): void
     {
-        $this->container->make('view');
+        $view = $this->container->make("view");
+        $view->setEngine("blade");
+        $view->setExtension(".blade.php");
     }
 }

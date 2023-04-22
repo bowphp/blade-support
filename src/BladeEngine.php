@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Bow\Blade;
 
 use Bow\Configuration\Loader as Config;
@@ -20,21 +22,21 @@ class BladeEngine extends EngineAbstract
      *
      * @var string
      */
-    protected $name = 'blade';
+    protected string $name = 'blade';
 
     /**
      * BladeEngine constructor.
      *
-     * @param Config $config
+     * @param array $config
      * @return void
      */
-    public function __construct(Config $config)
+    public function __construct(array $config)
     {
         $this->config = $config;
 
-        $path = (array) realpath($config['view.path']);
+        $path = (array) realpath($config['path']);
 
-        $this->engine = new Blade($path[0], $config['view.cache']);
+        $this->engine = new Blade($path[0], $config['cache']);
 
         array_shift($path);
 
