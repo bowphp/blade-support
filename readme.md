@@ -9,10 +9,17 @@ The documentaion is available in [english](./docs/en.md) and [french](./docs/fr.
 Thank you for considering contributing to Bow Framework! The contribution guide is in the framework documentation.
 
 - [Franck DAKIA](https://github.com/papac)
-- [Thank's collaborators](https://github.com/papac/bow-blade/graphs/contributors)
+- [Thank's collaborators](https://github.com/bowphp/tintin/graphs/contributors)
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
 
 ## Contact
 
-[dakiafranck@gmail.com](mailto:dakiafranck@gmail.com) - [@franck_dakia](https://twitter.com/franck_dakia)
+- [papac@bowphp.com](mailto:papac@bowphp.com)
+- [@papacdev](https://twitter.com/papacdev)
 
-<a href="https://www.buymeacoffee.com/iOLqZ3h" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-black.png" alt="Buy Me A Coffee" style="height: 30px !important; width: 150px !important;" ></a>
+Please, if there is a bug on the project contact me by email or leave me a message on [Slack](https://bowphp.slack.com). or [join us on Slask](https://join.slack.com/t/bowphp/shared_invite/enQtNzMxOTQ0MTM2ODM5LTQ3MWQ3Mzc1NDFiNDYxMTAyNzBkNDJlMTgwNDJjM2QyMzA2YTk4NDYyN2NiMzM0YTZmNjU1YjBhNmJjZThiM2Q)
