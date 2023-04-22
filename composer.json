@@ -4,7 +4,7 @@
 	"keywords": ["blade", "tintin", "bowphp"],
 	"type": "library",
 	"require": {
-		"bowphp/framework": "*",
+		"bowphp/framework": "^5.0",
 		"jenssegers/blade": "^1.4"
 	},
 	"license": "MIT",
