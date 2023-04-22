@@ -23,8 +23,6 @@ class BladeEngineConfiguration extends Configuration
      */
     public function run(): void
     {
-        $view = $this->container->make("view");
-        $view->setEngine("blade");
-        $view->setExtension(".blade.php");
+        //
     }
 }

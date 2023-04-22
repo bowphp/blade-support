@@ -48,7 +48,7 @@ class BladeEngine extends EngineAbstract
     /**
      * @inheritDoc
      */
-    public function render($filename, array $data = []): string
+    public function render(string $filename, array $data = []): string
     {
         $filename = $this->checkParseFile($filename, false);
 
