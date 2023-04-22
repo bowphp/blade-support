@@ -1,21 +1,20 @@
 <?php
 
-namespace Papac;
+namespace Bow\Blade;
 
 use Bow\View\View;
 use Bow\Configuration\Loader as Config;
 use Bow\Configuration\Configuration;
 
-class BladeConfiguration extends Configuration
+class BladeEngineConfiguration extends Configuration
 {
     /**
-     * @inheritdoc
+     * @inheritDoc
      */
-    public function create(Config $config)
+    public function create(Config $config): void
     {
         $this->container->bind('view', function () use ($config) {
             View::pushEngine('blade', BladeEngine::class);
-            
             View::configure($config);
 
             return View::getInstance();
@@ -23,9 +22,9 @@ class BladeConfiguration extends Configuration
     }
 
     /**
-     * @inheritdoc
+     * @inheritDoc
      */
-    public function run()
+    public function run(): void
     {
         $this->container->make('view');
     }

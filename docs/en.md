@@ -3,53 +3,10 @@
 Install a copy of the package with [composer](https://getcomposer.org).
 
 ```bash
-composer require papac/bow-blade
+composer require bowphp/blade
 ```
 
-You can directly use the `\Papac\BladeConfiguration::class` configuration in the package and go to [config](#configuration) or create a Bow configuration. This will give you full control over the configuration if you would like to add code to it.
-
-### configuration manually
-
-```bash
-php bow add:configuration BladeConfiguration
-```
-
-In the `BladeConfiguration` configuration located in `app/Configurations`, add the following code:
-
-```php
-<?php
-
-namespace App\Configurations;
-
-use Bow\View\View;
-use Bow\Configuration\Loader;
-use Bow\Configuration\Configuration;
-
-class BladeConfiguration extends Configuration
-{
-  /**
-   * @inheritdoc
-   */
-  public function create(Loader $config)
-  {
-    $this->container->bind('view', function () use ($config) {
-      View::pushEngine('blade', \Papac\BladeEngine::class);
-      
-      View::configure($config);
-
-      return View::getInstance();
-    });
-  }
-
-  /**
-   * @inheritdoc
-   */
-  public function run()
-  {
-    $this->container->make('view');
-  }
-}
-```
+You can directly use the `\Bow\Blade\BladeEngineConfiguration::class` configuration in the package and go to [config](#configuration).
 
 ## Configuration
 
@@ -68,7 +25,7 @@ public function configurations()
    */
   return [
     // other
-    \App\Configurations\BladeConfiguration::class,
+    \Bow\Blade\BladeEngineConfiguration::class,
   ];
 }
 ```
@@ -84,10 +41,22 @@ return [
 ];
 ```
 
-## Author
+## Contributing
 
-**Franck DAKIA** is a Full Stack developer based in Africa, Ivory Coast. Passionate about code and collaborative development, speaker, trainer and member of several developer communities and many collaborators.
+Thank you for considering contributing to Bow Framework! The contribution guide is in the framework documentation.
 
-Contact me at [dakiafranck@gmail.com](mailto:dakiafranck@gmail.com) - [@franck_dakia](https://twitter.com/franck_dakia)
+- [Franck DAKIA](https://github.com/papac)
+- [Thank's collaborators](https://github.com/bowphp/tintin/graphs/contributors)
 
-**Please, if there is a bug on the project please contact me by email or leave me a message on the [slack](https://bowphp.slack.com). or [join us on slask](https://join.slack.com/t/bowphp/shared_invite/enQtNzMxOTQ0MTM2ODM5LTQ3MWQ3Mzc1NDFiNDYxMTAyNzBkNDJlMTgwNDJjM2QyMzA2YTk4NDYyN2NiMzM0YTZmNjU1YjBhNmJjZThiM2Q)**
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+
+## Contact
+
+- [papac@bowphp.com](mailto:papac@bowphp.com)
+- [@papacdev](https://twitter.com/papacdev)
+
+Please, if there is a bug on the project contact me by email or leave me a message on [Slack](https://bowphp.slack.com). or [join us on Slask](https://join.slack.com/t/bowphp/shared_invite/enQtNzMxOTQ0MTM2ODM5LTQ3MWQ3Mzc1NDFiNDYxMTAyNzBkNDJlMTgwNDJjM2QyMzA2YTk4NDYyN2NiMzM0YTZmNjU1YjBhNmJjZThiM2Q)
